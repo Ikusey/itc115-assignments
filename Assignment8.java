@@ -1,4 +1,11 @@
+//*******************************************************************
 
+//  assignment8
+//
+// isSorted checks if the given array is sorted ascending, isUnique checks if all values in the
+// given array are unique
+//By: Azriel Policarpio
+//3/1/2020
 public class Assignment8 {
 
 	public static void main(String[] args) {
