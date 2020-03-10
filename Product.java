@@ -1,12 +1,13 @@
+import java.text.NumberFormat;
 
 public class Product {
 
-	private int productCode;
+	private String productCode;
 	private int count;
 	private double price;
 	private String description;
 	
-	public Product(int productCode, int count, double price, String description) {
+	public Product(String productCode, int count, double price, String description) {
 		this.productCode = productCode;
 		this.count = count;
 		this.price = price;
@@ -15,14 +16,15 @@ public class Product {
 	
 	@Override
 	public String toString() {
-		return description + " [productCode=" + productCode + ", count=" + count + ", price=" + price
+		return description + " [productCode= " + productCode + ", count= " + count + ", "
+				+ "price= " + NumberFormat.getCurrencyInstance().format(this.price)
 				+  "]";
 	}
-
-	public int getProductCode() {
+	
+	public String getProductCode() {
 		return productCode;
 	}
-	public void setProductCode(int productCode) {
+	public void setProductCode(String productCode) {
 		this.productCode = productCode;
 	}
 	public int getCount() {
